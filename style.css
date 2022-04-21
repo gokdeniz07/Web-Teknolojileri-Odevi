@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.slider{
+    background: url(antalya-merkez-1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+}
+.content p{
+    padding: 2rem;
+}
+nav{
+    position: absolute; /*bu varsa menüyle beraber aşağı iner barımız*/
+    background: #2cbd46; /* menü bar'a renk verdik */
+    width: 100%;
+    height: 80px;
+    /* text-align: center; textleri ortaladık */
+}
+nav #menuBtn{ /* id*/
+    display: none; /*checkbox!ı gizledik*/
+}
+nav .menuBtn{ /*class*/
+    font-size: 2rem;
+    color: #f1faee;
+    float: right;
+    line-height: 80px;
+    margin-right: 2rem; /*ortaladı*/
+    display: none;
+}
+nav .logo{
+    color: #f1faee;
+    font-size: 1.5rem;
+    display: inline-block;
+    height: 80px;
+    line-height:80px; /* yazı ortalamak için*/
+    padding: 0 2rem; /*logonun sola yapışıklığından kurtardık */
+}
+nav ul{ /* html deki menu barın ul'sine eriştik */
+    float: right; /* textleri sağa yapıştırdı*/
+    margin-right: 2rem; 
+}
+nav ul li{ /* htmldeki men barın listelerine erştik */
+    list-style: none; /*text önündeki noktalar kalktı*/
+    display: inline-block; /* textleri yan yana getirdi*/
+    line-height: 80px; 
+    margin:0 .2rem; /* list içindeki textlerin arasını ayırdı */
+   
+}
+
+nav ul li a{ /*ul içindeki li'nin içindeki a etiketine ulaştık */
+    color: #fff;
+    font-size:1rem;
+    padding: .5rem;
+    border-radius: 3px; /*hover koyunca işe yaradı textlerin arka plan renginin px'li*/
+    text-decoration: none; /*a etiketi ile yazınca altı çizgili oluyordu onu yok ettik*/
+}
+
+nav ul li a:hover{ /*html de hakımdadaki li'ye class açıp class'a active demiştik*/
+    background: #d4c995;
+}
+nav ul li a.active{
+    background: #e61946; /*önce active'i sonra hover'ı yazsaydık active'in arka planı da renk değiştirirdi ama şimdi sabit*/
+}
+
+/* header{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./img/antalya-merkezinde-gezilecek-yerler.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center ;
+
+}
+.header-content{
+    position: fixed;
+    margin-bottom: 150px;
+    color: rgb(0, 247, 255);
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background: #ff1717;
+    margin: 8px auto; 
+    border-radius: 5px;
+}
+.header-content h1 {
+    font-size: 7vmin; 
+    margin-top: 50px;
+    margin-bottom: 30px; 
+} */
+
+@media (max-width:1050px){
+    nav .menuBtn{
+        display: initial; /*menu ikonumuzu büyüyünce kaybolan küçülünce ortaya çıkan ikon haline getirdik*/
+    }
+    nav ul{
+        position: fixed;
+        background: #d4c995;
+        width:100%;
+        height: calc(100vh-80px); /* navbar'ı 80px yapmıştık. taşmasın diye böyle yazdık*/
+        top: 80px;
+        display: flex; /* yan yana dizildi*/
+        flex-direction: column; /*alt alta dizildi*/
+        align-items: center;
+        justify-content: center; /* ekrana ortaladık*/
+        transition: all .5s; /*animasyonlu getirtir*/
+
+        left: -100%; /*küçüldüğünde solda kaldırıyo*/
+
+    }
+    nav ul li{
+        display: block;
+        min-width: 80%;
+        text-align: center;/*ortalı dursun diye*/
+        line-height: 4rem; /*aralarını ayırdık*/
+    }
+    nav ul li a{
+        display: block;
+        font-size: 1.2rem;
+    }
+        nav #menuBtn:checked ~ ul{ /*id'si btn olan şey tıklanmış ise = chacked ise onunla aynı elementin yani nav'ın içindeki ul'yi seç demek ~ işaret ile*/
+        left: 0%;
+    }
+
+}
+
+ @media (max-width:359px){
+       nav .logo{
+           font-size: 1.5rem;
+       }
+       nav ul li a{
+           padding: 0%;
+       }
+
+} 
+
+
+
