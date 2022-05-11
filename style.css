@@ -15,7 +15,8 @@
     padding: 2rem;
 }
 nav{
-    position: absolute; /*bu varsa menüyle beraber aşağı iner barımız*/
+    position: sticky; /*bu varsa menüyle beraber aşağı iner barımız*/
+    top: 0;
     background: #2cbd46; /* menü bar'a renk verdik */
     width: 100%;
     height: 80px;
@@ -147,5 +148,18 @@ nav ul li a.active{
 
 } 
 
+.hakkimizda{
+    background-color:#f2f2f2 ;
+}
 
+.ayrac{
+    border:none;
+    border-top: 3px solid #181818;
+    max-width: 250px;
+    margin:25px auto;
+}
+.ibeyaz{
+    position: relative;
+    top: -60px;
 
+}
