@@ -42,5 +42,63 @@
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+
+    <header id="headerSection">
+        <div class="overlay">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col my-auto">
+                        <h1 class="display-3 text-white"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="text-white mx-5 mb-5">
+        <div class="bg-dark container border border-secondary rounded shadow-lg" id="form1">
+            <form action="logingit.php" name="myForm" class="needs-validation" onsubmit="return validate();" method="POST">
+                <div class="form-row my-3">Email: CC@hotmail.com Şifre: 123
+                </div>
+                <div class="form-row my-3">
+                    <div class="col-lg-4 my-3">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" name="email" id="email" onchange="emailV();">
+                        <div class="valid-feedback">
+                            Kriterlere uyuyor
+                        </div>
+                        <div class="invalid-feedback">
+                            Alan boş yada Girdiğiniz bilgiler E mail formatında DEĞİL!!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row my-3">
+                    <div class="col-lg-4 mb-3">
+                        <label for="password">Şifre:</label>
+                        <input type="password" class="form-control" name="sifre" onchange="sifreV();">
+                        <div class="invalid-feedback">
+                            Alan boş yada Şifre rakamdan başka karakter içeriyor
+                        </div>
+                        <div class="valid-feedback">
+                            Kriterlere Uyuyor
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-12 mb-3">
+                        <input type="submit" class="btn btn-primary" value="Gonder">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
 </body>
 </html>
