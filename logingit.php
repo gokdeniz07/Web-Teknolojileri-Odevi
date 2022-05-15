@@ -1,6 +1,6 @@
 <?php 
-                          $myemail="CC@hotmail.com";
-                          $mysifre='123';
+                          $myemail="g201210026@sakarya.edu.tr";
+                          $mysifre='g201210026';
                           $email = $_POST['email'];
                           $sifre = $_POST['sifre'];
                           $namen=explode("@",$email);
@@ -27,45 +27,29 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="style.css">
+    
 
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-lg">
-        <a class="navbar-brand" href="index.html">WebTechProject</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="hakkimda.html">Hakkımda <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sehrim.html">Şehrim</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="iletisim.html">İletişim Sayfası</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="miras.html">Mirasımız</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ulas.html">Bana Ulaşın</a>
-            </li>
-            
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<nav>
+        <h1 class="logo">Gökdeniz DEMİR</h1>
+        <input type="checkbox" id="menuBtn"> 
+        <label for="menuBtn" class="menuBtn">
+            <i class="fas fa-bars"></i>
+        </label>
+      
+       <ul>
+           <li> <a class="active" href="index.html" target="_self"></i>Hakkımda</a> </li>
+           <li> <a href="Ozgecmisim.html" target="_self">Özgeçmişim</a> </li>
+           <li> <a href="İlgiAlanlarim.html" target="_self">İlgi Alanlarım </a> </li>
+           <li> <a href="Sehrim.html" target="_self">Şehrim</a> </li>
+           <li> <a href="Takimimiz.html" target="_self">Takımımız</a> </li>
+           <li> <a href="İletisim.html" target="_self">İletişim</a> </li>
+           <li> <a href="Giris.html" target="_self">Giriş</a> </li>
+          
+       </ul>
+    </nav>
 
       <header id="headerSection">
         <div class="overlay">
@@ -83,7 +67,7 @@
         <div class="bg-dark container border border-secondary rounded shadow-lg">
           <div class="row my-3 ">
             <div class="col-lg-12 my-4">
-              <h1 class="display-4 text-white" align="center" >
+              <h1 class="display-4 text-white align-center"  >
                   <?php
                     if($signal)
                     {

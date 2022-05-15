@@ -3,9 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    
 }
 .slider{
-    background: url(antalya-merkez-1.jpg);
+    background: url(image/antalya-merkez-1.jpg);
     width: 100%;
     height: 100vh;
     background-size: cover;

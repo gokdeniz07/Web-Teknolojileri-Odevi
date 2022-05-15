@@ -1,26 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <script src="https://code.jquery.com/jquery-1.6.4.js"></script>
-  <title>JS Bin</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+   
+    
+    <nav>
+        <h1 class="logo">Gökdeniz DEMİR</h1>
+        <input type="checkbox" id="menuBtn"> 
+        <label for="menuBtn" class="menuBtn">
+            <i class="fas fa-bars"></i>
+        </label>
+      
+       <ul>
+           <li> <a class="active" href="index.html" target="_self"></i>Hakkımda</a> </li>
+           <li> <a href="Ozgecmisim.html" target="_self">Özgeçmişim</a> </li>
+           <li> <a href="İlgiAlanlarim.html" target="_self">İlgi Alanlarım </a> </li>
+           <li> <a href="Sehrim.html" target="_self">Şehrim</a> </li>
+           <li> <a href="Takimimiz.html" target="_self">Takımımız</a> </li>
+           <li> <a href="İletisim.html" target="_self">İletişim</a> </li>
+           <li> <a href="Giris.html" target="_self">Giriş</a> </li>
+          
+       </ul>
+    </nav>
+    <div class="batman"></div>
 <div class="shawshank"></div>
   <script>
 
   $.getJSON('https://www.omdbapi.com/?apikey=47d2b748&t=shawshank', function(data){
-    var display = `Title: ${data.Title}<br>
+    var display1 = `Title: ${data.Title}<br>
                    Year: ${data.Year}<br>
                    Director: ${data.Director}<br>
                    Runtime: ${data.Runtime}<br>
-                   Poster: ${data.Poster}<br>
+                   Poster: <img src=${data.Poster}><br>
                    Actors: ${data.Actors}`
-    $(".shawshank").html(display);
+    $(".shawshank").html(display1);
+  });
+
+
+  $.getJSON('https://www.omdbapi.com/?apikey=47d2b748&t=batman', function(data){
+    var display2 = `Title: ${data.Title}<br>
+                   Year: ${data.Year}<br>
+                   Director: ${data.Director}<br>
+                   Runtime: ${data.Runtime}<br>
+                   Poster: <img src=${data.Poster}><br>
+                   Actors: ${data.Actors}`
+    $(".batman").html(display2);
   });
   </script>
-<img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"></img>
+
+
+
+
+
+
 </body>
 </html>
